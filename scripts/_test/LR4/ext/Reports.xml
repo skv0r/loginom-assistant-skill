@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Reports>
+	<ModelReportGroups>
+		<Item Guid="7f190eba-882e-4358-b158-0416aec814e2" DisplayName="k-means">
+			<ModelReportViewItems>
+				<Item Guid="d4a90b6e-7772-4846-9470-169c870bfb3e" DisplayName="Параметры качества до исключения" ViewGlobalNodeId="046169b9-8bd0-42fa-882c-cd2186492cf2"/>
+				<Item Guid="e8a9156e-1f63-4660-adab-1e52e743b824" DisplayName="Параметры качества после исключения" ViewGlobalNodeId="925428c5-a639-4805-8ca0-6d1ff207bb2d"/>
+			</ModelReportViewItems>
+		</Item>
+		<Item Guid="103a7435-0023-4490-a0f7-e5dd5b6cc18b" DisplayName="EM">
+			<ModelReportViewItems>
+				<Item Guid="05b2aae9-f03f-4da6-af31-85fe267482e9" DisplayName="Параметры качества до исключения" ViewGlobalNodeId="49f98d77-f567-4764-b196-2ae171c58247"/>
+				<Item Guid="a5ae2167-bc1f-4558-87b1-c748d4a1baf0" DisplayName="Параметры качества после исключения" ViewGlobalNodeId="55739f47-5176-4b99-87d8-fd37add4d0a3"/>
+			</ModelReportViewItems>
+		</Item>
+	</ModelReportGroups>
+</Reports>

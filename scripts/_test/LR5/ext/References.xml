@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<References>
+	<Item Guid="8f647727-6ffc-4092-a153-fc5a726050f1" HintPath="../../../../../BigData/libs/loginom-silver-kit-master/silver_kit/loginom_silver_kit.lgp">
+		<Name Guid="f343d16a-62c2-4d3c-a925-e2c2fbed245e" Name="loginom_silver_kit" VersionMask="^3.1.1"/>
+	</Item>
+</References>

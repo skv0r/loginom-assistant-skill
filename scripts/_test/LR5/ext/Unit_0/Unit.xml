@@ -1,0 +1,1289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WorkFlow xsi:type="TBGPackageModelWorkFlow">
+		<Nodes>
+			<Item Guid="b5ca6b1f-b871-45bf-a16e-b8cd6f4b8e30" DisplayName="IowaLiquorSales.csv" VendorGuid="dd767700-1321-4c70-ab92-2acfc4db4492" GlobalNodeID="ca0bd25a-a76f-4021-aaec-d21ace64bbee" GenerateNodeTitle="false">
+				<InputPorts>
+					<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение">
+							<Socket xsi:type="TBGConnectionInputSocket" Virgin="true">
+								<Constraints/>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных">
+							<Socket xsi:type="TBGDataSetOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGImportTextFile" FileName="../../../../../lr5/5/Iowa_Liquor_Sales.csv" CodePage="65001" DelimiterChar="," DecimalSeparator="." DateFormat="dd/MM/yyyy" DateSeparator="/">
+						<ColumnDefs>
+							<Item Name="Invoice_Item_Number" DisplayName="Invoice/Item Number" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Date" DataType="dtDateTime" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Store_Number" DisplayName="Store Number" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Store_Name" DisplayName="Store Name" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Address" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="City" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Zip_Code" DisplayName="Zip Code" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Store_Location" DisplayName="Store Location" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="County_Number" DisplayName="County Number" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="County" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Category" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Category_Name" DisplayName="Category Name" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Vendor_Number" DisplayName="Vendor Number" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Vendor_Name" DisplayName="Vendor Name" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Item_Number" DisplayName="Item Number" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Item_Description" DisplayName="Item Description" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Pack" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Bottle_Volume__ml_" DisplayName="Bottle Volume (ml)" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="State_Bottle_Cost" DisplayName="State Bottle Cost" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="State_Bottle_Retail" DisplayName="State Bottle Retail" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Bottles_Sold" DisplayName="Bottles Sold" DataType="dtInteger" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Sale__Dollars_" DisplayName="Sale (Dollars)" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive"/>
+							<Item Name="Volume_Sold__Liters_" DisplayName="Volume Sold (Liters)" DataType="dtFloat" DataKind="dkContinuous" UsageType="utActive"/>
+							<Item Name="Volume_Sold__Gallons_" DisplayName="Volume Sold (Gallons)" DataType="dtFloat" DataKind="dkContinuous" UsageType="utActive"/>
+						</ColumnDefs>
+					</Engine>
+				</Component>
+				<Position Left="152" Top="376"/>
+			</Item>
+			<Item Guid="a4dc5b6c-105c-42e9-a701-b9ffee0d7d7c" DisplayName="IowaLiquorSales.lgd" VendorGuid="70fd0efe-6caa-4151-95e0-1868586e32c9" GlobalNodeID="6530f798-5ef2-45d0-9935-88bf9f37a29f" GenerateNodeTitle="false">
+				<InputPorts>
+					<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение"/>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Источник данных"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение">
+							<Socket xsi:type="TBGConnectionInputSocket" Virgin="true">
+								<Constraints/>
+							</Socket>
+						</Item>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Источник данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGExportNative" FileName="IowaLiquorSales.lgd" Compression="dcLZ4"/>
+				</Component>
+				<Position Left="800" Top="368"/>
+			</Item>
+			<Item Guid="3de82028-ec79-4d3d-9548-52e4d736c4aa" DisplayName="Калькулятор" VendorGuid="c7b69712-557f-4e51-bba5-db9cc2659e7a" GlobalNodeID="239ac78d-7c91-4798-a416-8e2de2a03d7b" GenerateNodeTitle="false">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных"/>
+					<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource>
+									<ColumnDefs>
+										<Item Name="Date" DisplayName="Дата" DataType="dtDateTime" DataKind="dkContinuous" InputColumnInfoName="Date"/>
+										<Item Name="City" DisplayName="Город" DataType="dtString" DataKind="dkDiscrete" InputColumnInfoName="City"/>
+										<Item Name="Pack" DisplayName="Количество единиц в упаковке" DataType="dtInteger" DataKind="dkContinuous" InputColumnInfoName="Pack"/>
+										<Item Name="StoreName" DisplayName="Название магазина" DataType="dtString" DataKind="dkDiscrete" OriginType="iotCustom" InputColumnInfoName="Store_Name"/>
+										<Item Name="CategoryName" DisplayName="Категория" DataType="dtString" DataKind="dkDiscrete" OriginType="iotCustom" InputColumnInfoName="Category_Name"/>
+										<Item Name="VendorNumber" DisplayName="Код поставщика" DataType="dtInteger" DataKind="dkContinuous" OriginType="iotCustom" InputColumnInfoName="Vendor_Number"/>
+										<Item Name="VendorName" DisplayName="Поставщик" DataType="dtString" DataKind="dkDiscrete" OriginType="iotCustom" InputColumnInfoName="Vendor_Name"/>
+										<Item Name="ItemNumber" DisplayName="Код товара" DataType="dtInteger" DataKind="dkContinuous" OriginType="iotCustom" InputColumnInfoName="Item_Number"/>
+										<Item Name="ItemDescription" DisplayName="Товар" DataType="dtString" DataKind="dkDiscrete" OriginType="iotCustom" InputColumnInfoName="Item_Description"/>
+										<Item Name="BottleVolume" DisplayName="Объем (мл)" DataType="dtInteger" DataKind="dkContinuous" OriginType="iotCustom" InputColumnInfoName="Bottle_Volume__ml_"/>
+										<Item Name="BottlesSold" DisplayName="Количество бутылок  продано" DataType="dtInteger" DataKind="dkContinuous" OriginType="iotCustom" InputColumnInfoName="Bottles_Sold"/>
+										<Item Name="VolumeSold" DisplayName="Проданный объем (л)" DataType="dtFloat" DataKind="dkContinuous" OriginType="iotCustom" InputColumnInfoName="Volume_Sold__Liters_"/>
+										<Item Name="SaleDollars1" DisplayName="Сумма продажи ($)1" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive" OriginType="iotCustom" InputColumnInfoName="Sale__Dollars_"/>
+										<Item Name="BottleCost1" DisplayName="Себестоимость бутылки ($)1" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive" OriginType="iotCustom" InputColumnInfoName="State_Bottle_Cost"/>
+										<Item Name="BottleRetail1" DisplayName="Розничная цена бутылки ($)1" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive" OriginType="iotCustom" InputColumnInfoName="State_Bottle_Retail"/>
+									</ColumnDefs>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+						<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных">
+							<Socket xsi:type="TBGDerivedDataSourceOutputSocket">
+								<DataSource>
+									<ColumnDefs>
+										<Item Name="Date" DisplayName="Дата" DataType="dtDateTime" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="Date"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="City" DisplayName="Город" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="City"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="Pack" DisplayName="Количество единиц в упаковке" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="Pack"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="StoreName" DisplayName="Название магазина" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="StoreName"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="CategoryName" DisplayName="Категория" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="CategoryName"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VendorNumber" DisplayName="Код поставщика" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="VendorNumber"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VendorName" DisplayName="Поставщик" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="VendorName"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="ItemNumber" DisplayName="Код товара" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="ItemNumber"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="ItemDescription" DisplayName="Товар" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="ItemDescription"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleVolume" DisplayName="Объем (мл)" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottleVolume"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottlesSold" DisplayName="Количество бутылок  продано" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottlesSold"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VolumeSold" DisplayName="Проданный объем (л)" DataType="dtFloat" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="VolumeSold"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="SaleDollars" DisplayName="Сумма продажи ($)" DataType="dtFloat" DataKind="dkContinuous" OriginType="iotCustom">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="SaleDollars"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleCost" DisplayName="Себестоимость бутылки ($)" DataType="dtFloat" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottleCost"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleRetail" DisplayName="Розничная цена бутылки ($)" DataType="dtFloat" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottleRetail"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+									</ColumnDefs>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGCalcData">
+						<Expressions>
+							<Item Name="SaleDollars" DisplayName="Сумма продажи ($)" DataType="dtFloat" Expression="Val(Replace(SubStr(SaleDollars1,2,10),&quot;.&quot;,&quot;,&quot;))"/>
+							<Item Name="BottleCost" DisplayName="Себестоимость бутылки ($)" DataType="dtFloat" Expression="Val(Replace(SubStr(BottleCost1,2,10),&quot;.&quot;,&quot;,&quot;))"/>
+							<Item Name="BottleRetail" DisplayName="Розничная цена бутылки ($)" DataType="dtFloat" Expression="Val(Replace(SubStr(BottleRetail1,2,10),&quot;.&quot;,&quot;,&quot;))"/>
+						</Expressions>
+					</Engine>
+				</Component>
+				<Position Left="384" Top="368"/>
+			</Item>
+			<Item Guid="b5becbe9-ac12-47a8-8f70-3c7b7cb032ad" DisplayName="Замена" VendorGuid="5346793b-a4f9-40f2-ae49-b14c731bd0f2" GlobalNodeID="57438cc3-4652-4340-b1de-c6f3ea21fd3d" GenerateNodeTitle="false">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs>
+										<Item Name="Date" DisplayName="Дата" DataType="dtDateTime" DataKind="dkContinuous" InputColumnInfoName="Date">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="City" DisplayName="Город" DataType="dtString" DataKind="dkDiscrete" InputColumnInfoName="City">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="Pack" DisplayName="Количество единиц в упаковке" DataType="dtInteger" DataKind="dkContinuous" InputColumnInfoName="Pack">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="StoreName" DisplayName="Название магазина" DataType="dtString" DataKind="dkDiscrete" InputColumnInfoName="StoreName">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="CategoryName" DisplayName="Категория" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive" InputColumnInfoName="CategoryName">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable ReplaceMode="rmTable">
+															<Items>
+																<Item Guid="eb01ea97-2554-4670-98c6-5c1078623948">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Cordials &amp; Liqueur"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Cordials &amp; Liqueurs"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="dbdbf043-2d23-4838-9b8b-62c8b9d4d789">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Distilled Spirit Specialty"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Distilled Spirits Specialty"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="d43bb835-78e6-4cbf-b32d-5c73edb4f1a8">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="AMERICAN DRY GINS"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Dry Gins"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="a9903cff-9f03-4569-9b99-cd38d5348410">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="AMERICAN SLOE GINS"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Sloe Gins"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="b146bfe9-73f0-4b05-9eea-7c78733a6416">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Vodka"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="American Vodkas"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="92574512-efe5-493a-8eaa-28935ba6bdc9">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="BLENDED WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Blended Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="4a3fd67d-69dc-4550-8cdc-2d58642df69a">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="BOTTLED IN BOND BOURBON"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Bottled in Bond Bourbon"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="bdc5c849-71cd-4ab1-8e89-77c00ee09288">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="CANADIAN WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Canadian Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="5a267c6d-1bdc-42e7-8f4d-358fc65f9d02">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Cocktails /RTD"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Cocktails / RTD"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="55020008-ee8a-44c2-872f-26acddd29b2d">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="COFFEE LIQUEURS"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Coffee Liqueurs"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="3a027f9a-fa9b-4ac3-89d1-de9e78400fa8">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="CORN WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Corn Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="a54c0947-71a7-468c-8081-76ebc2a8e0c0">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="CREAM LIQUEURS"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Cream Liqueurs"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="08da6586-8065-4591-8177-e4c474c15bd9">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="FLAVORED GINS"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Flavored Gin"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="77144e80-69c3-45e6-9cc2-057cd5be07d3">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="FLAVORED RUM"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Flavored Rum"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="c9e5a328-fa0e-45df-9a8b-d0adbfe117cc">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Cordials &amp; Liqueur"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Cordials &amp; Liqueurs"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="a6ff49f4-10e2-4c4a-aeb1-2fb6a7097532">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Distilled Spirit Specialty"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Distilled Spirits Specialty"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="8aeddad6-1bd8-4b22-b748-dbcb3032657c">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="IMPORTED DRY GINS"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Dry Gins"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="e72829ac-c7a8-41d4-adb8-3b779d23f241">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="IMPORTED SCHNAPPS"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Schnapps"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="bd43d7b5-3d77-47d2-9752-c67c064825ac">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="IMPORTED VODKA"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Vodka"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="87051701-d420-4ab7-8b79-5f9dd8dd124b">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Vodkas"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Imported Vodka"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="f61b50a1-6c0b-4f63-b2e2-19c01584b52f">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="IRISH WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Irish Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="043ba6cb-eeb0-42c8-8b70-a320e48027a6">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="SCOTCH WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Scotch Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="c9f2eee3-f4df-4cea-901f-4f0473665ef1">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="SINGLE BARREL BOURBON WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Single Barrel Bourbon Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="be41502f-0215-4376-9502-aff96ff233cb">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="SINGLE MALT SCOTCH"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Single Malt Scotch"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="d2c4d785-bd55-41a0-92a5-4f48d7753be3">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="SPICED RUM"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Spiced Rum"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="9349d5a9-9191-4346-a5ae-84a4b0f41e93">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="STRAIGHT BOURBON WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Straight Bourbon Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="82ce3de7-ad4c-405b-b2dd-15d74671acf7">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="STRAIGHT RYE WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Straight Rye Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="fb4b6f7b-2719-4120-a8c7-2bed1bb99070">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Temporary &amp;  Specialty Packages"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Temporary &amp; Specialty Packages"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="2aadb0c3-58a4-48c3-89a2-89e7302eeab8">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="TENNESSEE WHISKIES"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Tennessee Whiskies"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="d2263692-7191-48af-a364-bed76dbc5afa">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="TRIPLE SEC"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Triple Sec"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="026369be-384d-4efb-9747-203c711dc431">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="WHISKEY LIQUEUR"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Whiskey Liqueur"/>
+																	</ReplaceBy>
+																</Item>
+																<Item Guid="447d9f77-d81c-4cdf-bb0a-851699660f5b">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Unknown"/>
+																	</ReplaceBy>
+																</Item>
+															</Items>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VendorNumber" DisplayName="Код поставщика" DataType="dtInteger" DataKind="dkContinuous" InputColumnInfoName="VendorNumber">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VendorName" DisplayName="Поставщик" DataType="dtString" DataKind="dkDiscrete" UsageType="utActive" InputColumnInfoName="VendorName">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable ReplaceMode="rmTable">
+															<Items>
+																<Item Guid="203ef8f2-0391-40ba-8f12-323563179594">
+																	<DataValue DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer"/>
+																	</DataValue>
+																	<ReplaceBy DataType="dtString">
+																		<Value xsi:type="TBGStringVariableContainer" Value="Unknown"/>
+																	</ReplaceBy>
+																</Item>
+															</Items>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="ItemNumber" DisplayName="Код товара" DataType="dtInteger" DataKind="dkContinuous" InputColumnInfoName="ItemNumber">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="ItemDescription" DisplayName="Товар" DataType="dtString" DataKind="dkDiscrete" InputColumnInfoName="ItemDescription">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleVolume" DisplayName="Объем (мл)" DataType="dtInteger" DataKind="dkContinuous" InputColumnInfoName="BottleVolume">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottlesSold" DisplayName="Количество бутылок  продано" DataType="dtInteger" DataKind="dkContinuous" InputColumnInfoName="BottlesSold">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VolumeSold" DisplayName="Проданный объем (л)" DataType="dtFloat" DataKind="dkContinuous" InputColumnInfoName="VolumeSold">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="SaleDollars" DisplayName="Сумма продажи ($)" DataType="dtFloat" DataKind="dkContinuous" InputColumnInfoName="SaleDollars">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleCost" DisplayName="Себестоимость бутылки ($)" DataType="dtFloat" DataKind="dkContinuous" InputColumnInfoName="BottleCost">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleRetail" DisplayName="Розничная цена бутылки ($)" DataType="dtFloat" DataKind="dkContinuous" InputColumnInfoName="BottleRetail">
+											<Extensions>
+												<Item Guid="17d1bf63-c52e-447f-a3e6-0d31eaf519ab">
+													<Extension xsi:type="TBGReplaceTuneColumnExtension">
+														<ReplaceTable>
+															<Items/>
+															<RegExpressions/>
+														</ReplaceTable>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+									</ColumnDefs>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных">
+							<Socket xsi:type="TBGDerivedDataSourceOutputSocket">
+								<DataSource>
+									<ColumnDefs>
+										<Item Name="Date" DisplayName="Дата" DataType="dtDateTime" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="Date"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="City" DisplayName="Город" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="City"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="CategoryName" DisplayName="Категория" DataType="dtString" DataKind="dkDiscrete" OriginType="iotCustom">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="CategoryName"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="Pack" DisplayName="Количество единиц в упаковке" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="Pack"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="StoreName" DisplayName="Название магазина" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="StoreName"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VendorNumber" DisplayName="Код поставщика" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="VendorNumber"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VendorName" DisplayName="Поставщик" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="VendorName"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="ItemNumber" DisplayName="Код товара" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="ItemNumber"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="ItemDescription" DisplayName="Товар" DataType="dtString" DataKind="dkDiscrete">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="ItemDescription"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleVolume" DisplayName="Объем (мл)" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottleVolume"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottlesSold" DisplayName="Количество бутылок  продано" DataType="dtInteger" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottlesSold"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="VolumeSold" DisplayName="Проданный объем (л)" DataType="dtFloat" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="VolumeSold"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="SaleDollars" DisplayName="Сумма продажи ($)" DataType="dtFloat" DataKind="dkContinuous" OriginType="iotCustom">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="SaleDollars"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleCost" DisplayName="Себестоимость бутылки ($)" DataType="dtFloat" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottleCost"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+										<Item Name="BottleRetail" DisplayName="Розничная цена бутылки ($)" DataType="dtFloat" DataKind="dkContinuous">
+											<Extensions>
+												<Item Guid="936daf67-3d6e-474b-982f-98133c27a35b">
+													<Extension xsi:type="TBGColumnDefMappingExtension">
+														<Mapping Source="BottleRetail"/>
+													</Extension>
+												</Item>
+											</Extensions>
+										</Item>
+									</ColumnDefs>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGCustomModelComponentEngine"/>
+				</Component>
+				<Position Left="592" Top="368"/>
+			</Item>
+		</Nodes>
+		<Links>
+			<Item Guid="19092c8d-ab5e-4446-839d-f30f1a137b31">
+				<SourcePort NodeGuid="b5becbe9-ac12-47a8-8f70-3c7b7cb032ad" PortGuid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"/>
+				<TargetPort NodeGuid="a4dc5b6c-105c-42e9-a701-b9ffee0d7d7c" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="2e359e9f-c1f3-49af-85c9-a67d2b847f52">
+				<SourcePort NodeGuid="b5ca6b1f-b871-45bf-a16e-b8cd6f4b8e30" PortGuid="58f7e6c3-511e-39d7-8853-036e0a1a7612"/>
+				<TargetPort NodeGuid="3de82028-ec79-4d3d-9548-52e4d736c4aa" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="5b037ee7-6146-4314-9353-b50f0a791b2d">
+				<SourcePort NodeGuid="3de82028-ec79-4d3d-9548-52e4d736c4aa" PortGuid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"/>
+				<TargetPort NodeGuid="b5becbe9-ac12-47a8-8f70-3c7b7cb032ad" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+		</Links>
+		<ServiceNodes>
+			<Item Guid="6620f9de-e585-39c7-88a9-35255088ebb7" Name="VariablesNode" DisplayName="Переменные сценария" VendorGuid="af096bfc-0c02-4126-89f5-bc3a1b585321" OriginalVendorGuid="af096bfc-0c02-4126-89f5-bc3a1b585321" IsSealedVendor="true" GlobalNodeID="3b7c3fb2-784b-431d-9fac-e3f9d6222a0b">
+				<InputPorts/>
+				<OutputPorts>
+					<Item Guid="b671426b-642b-3e7c-b9a9-9653573f3199" Name="Variables" DisplayName="Переменные"/>
+					<Item Guid="0c7eccb7-0e65-36e9-89f4-1b674aca3b25" Name="SystemVariables" DisplayName="Переменные системы"/>
+					<Item Guid="87f24987-bc26-330f-aa19-5a67687c90a6" Name="SessionVariables" DisplayName="Переменные сессии"/>
+					<Item Guid="cdece2e4-848d-331b-96e0-b52a51909547" Name="PackageVariables" DisplayName="Переменные пакета"/>
+					<Item Guid="8f72d2e6-ba56-3732-b12e-98badbeafe47" Name="UserVariables" DisplayName="Переменные пользователя"/>
+				</OutputPorts>
+				<ServiceInputPorts/>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<OutputSockets>
+						<Item Guid="b671426b-642b-3e7c-b9a9-9653573f3199" Name="Variables" DisplayName="Переменные">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="0c7eccb7-0e65-36e9-89f4-1b674aca3b25" Name="SystemVariables" DisplayName="Переменные системы">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="87f24987-bc26-330f-aa19-5a67687c90a6" Name="SessionVariables" DisplayName="Переменные сессии">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="cdece2e4-848d-331b-96e0-b52a51909547" Name="PackageVariables" DisplayName="Переменные пакета">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="8f72d2e6-ba56-3732-b12e-98badbeafe47" Name="UserVariables" DisplayName="Переменные пользователя">
+							<Socket xsi:type="TBGVariablesOutputSocket">
+								<Variables>
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGModelVariablesComponentEngine"/>
+				</Component>
+			</Item>
+		</ServiceNodes>
+		<ServiceLinks/>
+		<Annotations>
+			<Item Guid="9c45aeb4-546a-48d5-b4b6-6b4e14aebd07" StyleNum="18" Text="Подготовка IowaLiquorSales.lgd.">
+				<Position Left="120" Top="232" Width="768" Height="272"/>
+			</Item>
+			<Item Guid="5c3bb66d-158f-4d1a-93cc-8a49a7f2d74a" StyleNum="4" Text="Преобразования в полях &quot;Категория&quot; и &quot;Поставщик&quot;">
+				<Position Left="536" Top="272" Width="168" Height="216"/>
+			</Item>
+			<Item Guid="fff2cda6-3059-4403-b3b3-8a32e854d16f" StyleNum="4" Text="Преобразование к вещественному типу">
+				<Position Left="328" Top="272" Width="168" Height="216"/>
+			</Item>
+			<Item Guid="728ae981-4389-4b0f-8cdb-854cf7c0aae5" StyleNum="4" Text="В рамках самостоятельного задания предлагаем вам проанализировать данные о продажах спиртных напитков в Айове.&#10;&#10;Набор данных Kaggle — https://www.kaggle.com/datasets/residentmario/iowa-liquor-sales&#10;&#10;Для более удобной работы данные преобразованы в Loginom Data File — IowaLiquorSales.lgd.&#10;1. Сумма продажи, себестоимость и розничная цена бутылки в долларах приведены к вещественному типу данных.&#10;2. Пустые значения категорий и поставщиков заменены на Unknown. В категориях товаров произведены замены таким образом, чтобы одинаковые категории были записаны единообразно.&#10;3. Поля, которые не потребуются для анализа, исключены из итогового набора данных.">
+				<Position Left="112" Top="40" Width="776" Height="176"/>
+			</Item>
+		</Annotations>
+	</WorkFlow>
+	<ModelViews>
+		<Nodes>
+			<Item Guid="a260e5fb-901c-4552-bfb6-b498c002182b" DisplayName="Качество данных" VendorGuid="85cb32b2-4a6d-4dca-9b7f-9548585095c1">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGQualityView">
+						<CommonConfigs DataSetPanelWidth="420"/>
+						<ColumnsStats>
+							<Item Name="Date" DataKind="dkContinuous" DataType="dtDateTime" Selected="true"/>
+							<Item Name="City" DataType="dtString" Selected="true"/>
+							<Item Name="Pack" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="Invoice_Item_Number" DisplayName="Invoice/Item Number" DataType="dtString" Selected="true"/>
+							<Item Name="Store_Number" DisplayName="Store Number" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="Store_Name" DisplayName="Store Name" DataType="dtString" Selected="true"/>
+							<Item Name="Address" DataType="dtString" Selected="true"/>
+							<Item Name="Zip_Code" DisplayName="Zip Code" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="Store_Location" DisplayName="Store Location" DataType="dtString" Selected="true"/>
+							<Item Name="County_Number" DisplayName="County Number" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="County" DataType="dtString" Selected="true"/>
+							<Item Name="Category" DataType="dtString" Selected="true"/>
+							<Item Name="Category_Name" DisplayName="Category Name" DataType="dtString" Selected="true"/>
+							<Item Name="Vendor_Number" DisplayName="Vendor Number" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="Vendor_Name" DisplayName="Vendor Name" DataType="dtString" Selected="true"/>
+							<Item Name="Item_Number" DisplayName="Item Number" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="Item_Description" DisplayName="Item Description" DataType="dtString" Selected="true"/>
+							<Item Name="Bottle_Volume__ml_" DisplayName="Bottle Volume (ml)" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="State_Bottle_Cost" DisplayName="State Bottle Cost" DataType="dtString" Selected="true"/>
+							<Item Name="State_Bottle_Retail" DisplayName="State Bottle Retail" DataType="dtString" Selected="true"/>
+							<Item Name="Bottles_Sold" DisplayName="Bottles Sold" DataKind="dkContinuous" Selected="true"/>
+							<Item Name="Sale__Dollars_" DisplayName="Sale (Dollars)" DataType="dtString" Selected="true"/>
+							<Item Name="Volume_Sold__Liters_" DisplayName="Volume Sold (Liters)" DataKind="dkContinuous" DataType="dtFloat" Selected="true"/>
+							<Item Name="Volume_Sold__Gallons_" DisplayName="Volume Sold (Gallons)" DataKind="dkContinuous" DataType="dtFloat" Selected="true"/>
+						</ColumnsStats>
+						<CalculationSettings/>
+						<CommonColumnConfigs>
+							<Item ID="0"/>
+							<Item ID="1"/>
+							<Item ID="2"/>
+							<Item ID="3"/>
+							<Item ID="4"/>
+						</CommonColumnConfigs>
+						<IndicatorColumnConfigs>
+							<Item ID="0"/>
+							<Item ID="1"/>
+							<Item ID="2"/>
+							<Item ID="3"/>
+							<Item ID="4"/>
+							<Item ID="5"/>
+							<Item ID="6"/>
+							<Item ID="7"/>
+							<Item ID="8"/>
+							<Item ID="9"/>
+							<Item ID="10"/>
+							<Item ID="11"/>
+							<Item ID="12"/>
+							<Item ID="13"/>
+							<Item ID="14"/>
+							<Item ID="15" Visible="false"/>
+							<Item ID="16" Visible="false"/>
+							<Item ID="17" Visible="false"/>
+							<Item ID="18" Visible="false"/>
+							<Item ID="19" Visible="false"/>
+							<Item ID="20"/>
+							<Item ID="21"/>
+						</IndicatorColumnConfigs>
+						<OverviewColumnConfigs>
+							<Item ID="0" Width="170" SortEnable="true" SortDirection="sdDesc"/>
+							<Item ID="1" Width="930"/>
+						</OverviewColumnConfigs>
+						<HistogramManager>
+							<ColumnConfigs>
+								<Item ID="0"/>
+								<Item ID="1"/>
+								<Item ID="2"/>
+								<Item ID="3"/>
+								<Item ID="4"/>
+							</ColumnConfigs>
+						</HistogramManager>
+					</Engine>
+				</Component>
+			</Item>
+			<Item Guid="cb2bf007-feac-49d7-b1bf-35e76bfe49cb" DisplayName="Таблица" VendorGuid="e6ed8484-b292-4534-a136-fd82df5cc01c">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket" Virgin="true">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGBrowseView">
+						<Filtering/>
+						<Grouping/>
+						<Sorting/>
+						<Options/>
+					</Engine>
+				</Component>
+			</Item>
+			<Item Guid="c223fd6d-3e02-47fb-9bc6-57fdbd5e17c0" DisplayName="Таблица" VendorGuid="e6ed8484-b292-4534-a136-fd82df5cc01c">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket" Virgin="true">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGBrowseView">
+						<Filtering/>
+						<Grouping/>
+						<Sorting/>
+						<Options/>
+					</Engine>
+				</Component>
+			</Item>
+			<Item Guid="f9e35b7b-8eb2-4d33-b8d5-d0b7435dd648" DisplayName="Таблица" VendorGuid="e6ed8484-b292-4534-a136-fd82df5cc01c">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGBrowseView">
+						<ViewColumns>
+							<Item Name="Invoice_Item_Number" DisplayName="Invoice/Item Number" DataType="dtString"/>
+							<Item Name="Date" DataType="dtDateTime"/>
+							<Item Name="Store_Number" DisplayName="Store Number" DataType="dtInteger"/>
+							<Item Name="Store_Name" DisplayName="Store Name" DataType="dtString"/>
+							<Item Name="Address" DataType="dtString"/>
+							<Item Name="City" DataType="dtString"/>
+							<Item Name="Zip_Code" DisplayName="Zip Code" DataType="dtInteger"/>
+							<Item Name="Store_Location" DisplayName="Store Location" DataType="dtString"/>
+							<Item Name="County_Number" DisplayName="County Number" DataType="dtInteger"/>
+							<Item Name="County" DataType="dtString"/>
+							<Item Name="Category" DataType="dtString"/>
+							<Item Name="Category_Name" DisplayName="Category Name" DataType="dtString"/>
+							<Item Name="Vendor_Number" DisplayName="Vendor Number" DataType="dtInteger"/>
+							<Item Name="Vendor_Name" DisplayName="Vendor Name" DataType="dtString"/>
+							<Item Name="Item_Number" DisplayName="Item Number" DataType="dtInteger"/>
+							<Item Name="Item_Description" DisplayName="Item Description" DataType="dtString"/>
+							<Item Name="Pack" DataType="dtInteger"/>
+							<Item Name="Bottle_Volume__ml_" DisplayName="Bottle Volume (ml)" DataType="dtInteger"/>
+							<Item Name="State_Bottle_Cost" DisplayName="State Bottle Cost" DataType="dtString"/>
+							<Item Name="State_Bottle_Retail" DisplayName="State Bottle Retail" DataType="dtString"/>
+							<Item Name="Bottles_Sold" DisplayName="Bottles Sold" DataType="dtInteger"/>
+							<Item Name="Sale__Dollars_" DisplayName="Sale (Dollars)" DataType="dtString"/>
+							<Item Name="Volume_Sold__Liters_" DisplayName="Volume Sold (Liters)" DataType="dtFloat"/>
+							<Item Name="Volume_Sold__Gallons_" DisplayName="Volume Sold (Gallons)" DataType="dtFloat"/>
+						</ViewColumns>
+						<Filtering Enabled="true">
+							<FilterColumns UseGlobalCaseSensitive="false">
+								<Item Guid="ddb68093-7e7e-46fa-af34-7923c473ab59" Name="Category_Name" DisplayName="Category Name" ConcatenationType="ctAnd" DataType="dtString" RelationType="frtIn">
+									<CompareValueList Count="2">
+										<I VarType="vrtString">Whiskey Liqueur</I>
+										<I VarType="vrtString">WHISKEY LIQUEUR</I>
+									</CompareValueList>
+								</Item>
+								<Item Guid="94ef0553-c5ab-4469-9bfd-0d8ecb51b192" Name="Item_Description" DisplayName="Item Description" ConcatenationType="ctAnd" DataType="dtString" RelationType="frtIn">
+									<CompareValueList Count="1">
+										<I VarType="vrtString">Southern Comfort</I>
+									</CompareValueList>
+								</Item>
+							</FilterColumns>
+						</Filtering>
+						<Grouping/>
+						<Sorting/>
+						<Options/>
+					</Engine>
+				</Component>
+			</Item>
+		</Nodes>
+		<Links>
+			<Item Guid="7eb0ce66-2b55-4a9a-9874-37e532f9be04">
+				<SourcePort NodeGuid="b5ca6b1f-b871-45bf-a16e-b8cd6f4b8e30" PortGuid="58f7e6c3-511e-39d7-8853-036e0a1a7612"/>
+				<TargetPort NodeGuid="a260e5fb-901c-4552-bfb6-b498c002182b" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="e1db9b2b-3b3c-46e3-a4e9-73aa5553d4e2">
+				<SourcePort NodeGuid="b5ca6b1f-b871-45bf-a16e-b8cd6f4b8e30" PortGuid="58f7e6c3-511e-39d7-8853-036e0a1a7612"/>
+				<TargetPort NodeGuid="f9e35b7b-8eb2-4d33-b8d5-d0b7435dd648" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+		</Links>
+	</ModelViews>
+</Unit>

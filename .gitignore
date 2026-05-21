@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+.env
+
+# Local overrides (machine-specific project root)
+scripts/paths.local.py
+LOGINOM_PROJECT_ROOT
+
+# Generated / scratch (scripts recreate on run)
+scripts/_work/*
+!scripts/_work/.gitkeep
+scripts/_package_units_snapshot.json
+scripts/_nodes_list.txt
+
+# Loginom backups from patch scripts
+*.lgp.bak
+*.lgp.bak_*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*~

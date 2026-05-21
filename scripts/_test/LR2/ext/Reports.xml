@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Reports>
+	<ModelReportGroups>
+		<Item Guid="f2196dc3-8ca6-4ad2-8473-3c3b3fba4dea" DisplayName="Правила">
+			<ModelReportViewItems>
+				<Item Guid="4e4b1c9e-0f64-4b6f-9040-793722171c4e" DisplayName="Куб" ViewGlobalNodeId="0f39cf0d-93f5-4192-a2af-fdd4233925e7"/>
+				<Item Guid="4d77a149-4e2d-4220-9aa2-56ac00aae8e2" DisplayName="Куб" ViewGlobalNodeId="494314c9-9f8f-404a-ad22-e244105bec2d"/>
+			</ModelReportViewItems>
+		</Item>
+	</ModelReportGroups>
+</Reports>

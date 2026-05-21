@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WorkFlow xsi:type="TBGPackageModelWorkFlow">
+		<Nodes>
+			<Item Guid="51d196b7-cbda-421f-a07b-881eafe65f43" DisplayName="dynamic.lgd" VendorGuid="35a6e054-ee0c-42f6-bda6-af10b57a36aa">
+				<InputPorts>
+					<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение">
+							<Socket xsi:type="TBGConnectionInputSocket" Virgin="true">
+								<Constraints/>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных">
+							<Socket xsi:type="TBGDataSetOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGImportNative" FileName="ЛР1/dynamic.lgd"/>
+				</Component>
+				<Position Left="248" Top="176"/>
+			</Item>
+			<Item Guid="92aec6a8-3695-47b4-93b8-e02996bb7d96" DisplayName="visits.lgd" VendorGuid="35a6e054-ee0c-42f6-bda6-af10b57a36aa">
+				<InputPorts>
+					<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение">
+							<Socket xsi:type="TBGConnectionInputSocket" Virgin="true">
+								<Constraints/>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных">
+							<Socket xsi:type="TBGDataSetOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGImportNative" FileName="ЛР1/visits.lgd"/>
+				</Component>
+				<Position Left="248" Top="288"/>
+			</Item>
+			<Item Guid="8dc0f70d-8f0e-4b03-a1f2-66d7be6f02e4" DisplayName="product_portfolio.lgd" VendorGuid="35a6e054-ee0c-42f6-bda6-af10b57a36aa">
+				<InputPorts>
+					<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="78ce58f4-e818-3754-bc2e-6af868677420" Name="Connection" DisplayName="Подключение">
+							<Socket xsi:type="TBGConnectionInputSocket" Virgin="true">
+								<Constraints/>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="58f7e6c3-511e-39d7-8853-036e0a1a7612" Name="DataSet" DisplayName="Набор данных">
+							<Socket xsi:type="TBGDataSetOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGImportNative" FileName="ЛР1/product_portfolio.lgd"/>
+				</Component>
+				<Position Left="248" Top="400"/>
+			</Item>
+			<Item Guid="23b3798f-db1e-4343-805f-ce949ac30ba2" DisplayName="Калькулятор" VendorGuid="c7b69712-557f-4e51-bba5-db9cc2659e7a">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных"/>
+					<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+						<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных">
+							<Socket xsi:type="TBGDerivedDataSourceOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGCalcData">
+						<Expressions/>
+					</Engine>
+				</Component>
+				<Position Left="432" Top="400"/>
+			</Item>
+			<Item Guid="2a7a5ee1-33cb-4d28-86c3-c2898ca916ac" DisplayName="Накопительный Итог" VendorGuid="c7b69712-557f-4e51-bba5-db9cc2659e7a">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных"/>
+					<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+						<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных">
+							<Socket xsi:type="TBGDerivedDataSourceOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGCalcData">
+						<Expressions>
+							<Item Name="CumRev" DisplayName="Накопительный Итог" DataType="dtFloat" Expression="CumulativeSum(&quot;SUM_REVENUE&quot;,&quot;ID_SHOP&quot;)"/>
+						</Expressions>
+					</Engine>
+				</Component>
+				<Position Left="688" Top="192"/>
+			</Item>
+			<Item Guid="90d1a084-6aa4-4ff9-ac83-b16b32bde993" DisplayName="Дата (месяц)" VendorGuid="a0e49d86-6fe3-43fc-8046-29d1ce92c03d">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Соответствуют условию"/>
+					<Item Guid="99559aff-aff4-3e08-8f1e-a290790bba03" Name="DataSourceElse" DisplayName="Не соответствуют условию"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs>
+										<Item Name="DATE_DAYDATE_MONTH" DisplayName="Дата (месяц)" DataType="dtDateTime" DataKind="dkDiscrete" UsageType="utActive" InputColumnInfoName="DATE_DAYDATE_MONTH"/>
+									</ColumnDefs>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Соответствуют условию">
+							<Socket xsi:type="TBGDerivedDataSourceOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="99559aff-aff4-3e08-8f1e-a290790bba03" Name="DataSourceElse" DisplayName="Не соответствуют условию">
+							<Socket xsi:type="TBGDerivedDataSourceOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGFilterDataEngine">
+						<Filter UseGlobalCaseSensitive="false">
+							<Item Guid="d1afbf8a-d501-445c-8051-56a21b63e950" Name="DATE_DAYDATE_MONTH" DisplayName="Дата (месяц)" ConcatenationType="ctAnd" DataType="dtDateTime" RelationType="frtLastPeriod" PeriodType="dptMonth" PeriodCount="1" DateSourceType="dstData"/>
+						</Filter>
+					</Engine>
+				</Component>
+				<Position Left="488" Top="128"/>
+			</Item>
+			<Item Guid="2a512f3a-7388-42b0-a8a1-64e47dfbc578" DisplayName="Выручка в тыс., Средний чек в тыс." VendorGuid="c7b69712-557f-4e51-bba5-db9cc2659e7a">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных"/>
+					<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные"/>
+				</InputPorts>
+				<OutputPorts>
+					<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных"/>
+				</OutputPorts>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Входной источник данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs>
+										<Item Name="SUM_REVENUE" DisplayName="Выручка магазина" DataType="dtFloat" DataKind="dkContinuous" UsageType="utActive" InputColumnInfoName="SUM_REVENUE"/>
+										<Item Name="AVG_AMOUNT_CHECK_DAY" DisplayName="Cредний чек" DataType="dtFloat" DataKind="dkContinuous" UsageType="utActive" InputColumnInfoName="AVG_AMOUNT_CHECK_DAY"/>
+									</ColumnDefs>
+								</DataSource>
+							</Socket>
+						</Item>
+						<Item Guid="455b65c3-0587-3a9c-b47e-9b0d285bff3c" Name="ControlVariables" DisplayName="Управляющие переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+						<Item Guid="d252e390-f72d-36c4-97fc-60d86186c3c6" Name="Variables" DisplayName="Входные переменные">
+							<Socket xsi:type="TBGTuneVariablesSocket" Virgin="true">
+								<Constraints/>
+								<Variables SyncThroughVariables="true">
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<OutputSockets>
+						<Item Guid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51" Name="DataSource" DisplayName="Выходной набор данных">
+							<Socket xsi:type="TBGDerivedDataSourceOutputSocket">
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGCalcData">
+						<Expressions>
+							<Item Name="ShortRev" DisplayName="Выручка в тыс." DataType="dtFloat" Expression="SUM_REVENUE/1000"/>
+							<Item Name="ShortAvgCheck" DisplayName="Средний чек в тыс." DataType="dtFloat" Expression="AVG_AMOUNT_CHECK_DAY/1000"/>
+						</Expressions>
+					</Engine>
+				</Component>
+				<Position Left="456" Top="272"/>
+			</Item>
+		</Nodes>
+		<Links>
+			<Item Guid="d1940c19-e376-4b99-9353-f30aae1ed5dd">
+				<SourcePort NodeGuid="8dc0f70d-8f0e-4b03-a1f2-66d7be6f02e4" PortGuid="58f7e6c3-511e-39d7-8853-036e0a1a7612"/>
+				<TargetPort NodeGuid="23b3798f-db1e-4343-805f-ce949ac30ba2" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="81c531b4-a943-4130-b43d-15e9cfa577e1">
+				<SourcePort NodeGuid="51d196b7-cbda-421f-a07b-881eafe65f43" PortGuid="58f7e6c3-511e-39d7-8853-036e0a1a7612"/>
+				<TargetPort NodeGuid="90d1a084-6aa4-4ff9-ac83-b16b32bde993" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="bfd65b0d-456e-442f-924a-70b73cb81412">
+				<SourcePort NodeGuid="90d1a084-6aa4-4ff9-ac83-b16b32bde993" PortGuid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"/>
+				<TargetPort NodeGuid="2a7a5ee1-33cb-4d28-86c3-c2898ca916ac" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="2634754a-1a22-488b-8ab5-c5deb1c4cc19">
+				<SourcePort NodeGuid="51d196b7-cbda-421f-a07b-881eafe65f43" PortGuid="58f7e6c3-511e-39d7-8853-036e0a1a7612"/>
+				<TargetPort NodeGuid="2a512f3a-7388-42b0-a8a1-64e47dfbc578" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+		</Links>
+		<ServiceNodes>
+			<Item Guid="6620f9de-e585-39c7-88a9-35255088ebb7" Name="VariablesNode" DisplayName="Переменные сценария" VendorGuid="af096bfc-0c02-4126-89f5-bc3a1b585321" OriginalVendorGuid="af096bfc-0c02-4126-89f5-bc3a1b585321" IsSealedVendor="true" GlobalNodeID="2ce12b85-bb52-4f73-856e-8a04cae650c6">
+				<InputPorts/>
+				<OutputPorts>
+					<Item Guid="b671426b-642b-3e7c-b9a9-9653573f3199" Name="Variables" DisplayName="Переменные"/>
+					<Item Guid="0c7eccb7-0e65-36e9-89f4-1b674aca3b25" Name="SystemVariables" DisplayName="Переменные системы"/>
+					<Item Guid="87f24987-bc26-330f-aa19-5a67687c90a6" Name="SessionVariables" DisplayName="Переменные сессии"/>
+					<Item Guid="cdece2e4-848d-331b-96e0-b52a51909547" Name="PackageVariables" DisplayName="Переменные пакета"/>
+					<Item Guid="8f72d2e6-ba56-3732-b12e-98badbeafe47" Name="UserVariables" DisplayName="Переменные пользователя"/>
+				</OutputPorts>
+				<ServiceInputPorts/>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<OutputSockets>
+						<Item Guid="b671426b-642b-3e7c-b9a9-9653573f3199" Name="Variables" DisplayName="Переменные">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="0c7eccb7-0e65-36e9-89f4-1b674aca3b25" Name="SystemVariables" DisplayName="Переменные системы">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="87f24987-bc26-330f-aa19-5a67687c90a6" Name="SessionVariables" DisplayName="Переменные сессии">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="cdece2e4-848d-331b-96e0-b52a51909547" Name="PackageVariables" DisplayName="Переменные пакета">
+							<Socket xsi:type="TBGModelVariablesOutputSocket"/>
+						</Item>
+						<Item Guid="8f72d2e6-ba56-3732-b12e-98badbeafe47" Name="UserVariables" DisplayName="Переменные пользователя">
+							<Socket xsi:type="TBGVariablesOutputSocket" Virgin="true">
+								<Variables>
+									<Elements/>
+								</Variables>
+							</Socket>
+						</Item>
+					</OutputSockets>
+					<Engine xsi:type="TBGModelVariablesComponentEngine"/>
+				</Component>
+			</Item>
+		</ServiceNodes>
+		<ServiceLinks/>
+		<Annotations/>
+	</WorkFlow>
+	<ModelViews>
+		<Nodes>
+			<Item Guid="cf4dd927-3c13-499d-872f-6f2ab56ee0cb" DisplayName="Диаграмма" VendorGuid="423d2c8c-4334-43f2-aad5-2f01e8bf0f87">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGChartView">
+						<Parameters Rationing="false">
+							<BackgroundColor/>
+							<Links>
+								<Item Name="lkXData" FieldType="dtDateTime" LinkKind="lkXData" FieldName="DATE_DAY"/>
+								<Item Name="lkLabels" LinkKind="lkLabels"/>
+							</Links>
+							<Series>
+								<Item Guid="98f9d567-0bf8-46a5-9abd-4dfcbd1a9eaa" DisplayName="Накопительный Итог">
+									<Color/>
+									<Links>
+										<Item Name="lkYData" FieldType="dtFloat" LinkKind="lkYData" FieldName="CumRev"/>
+									</Links>
+								</Item>
+							</Series>
+							<Axes>
+								<Item Name="apAbscissa" AxisType="atDatetime"/>
+								<Item Name="apLeftOrdinate" Position="apLeftOrdinate"/>
+								<Item Name="apRightOrdinate" Position="apRightOrdinate"/>
+							</Axes>
+						</Parameters>
+					</Engine>
+				</Component>
+			</Item>
+			<Item Guid="bf086926-33cd-494b-a250-fd3b6f44bc2a" DisplayName="Куб" VendorGuid="85236173-223c-4772-833f-7841c84a7ddf">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs>
+										<Item Name="ShortRev" DisplayName="Выручка в тыс." DataType="dtFloat" DataKind="dkContinuous" UsageType="utGroup" InputColumnInfoName="ShortRev"/>
+										<Item Name="ID_SHOPNAME_STORE" DisplayName="Название магазина" DataType="dtString" DataKind="dkDiscrete" UsageType="utGroup" InputColumnInfoName="ID_SHOPNAME_STORE"/>
+										<Item Name="DATE_DAY" DisplayName="Дата (день)" DataType="dtDateTime" DataKind="dkDiscrete" UsageType="utGroup" InputColumnInfoName="DATE_DAY"/>
+									</ColumnDefs>
+								</DataSource>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGCubeView">
+						<Dimensions>
+							<Dimensions>
+								<Item Name="ShortRev" DisplayName="Выручка в тыс." HAlignment="htaLeftJustify" DisplayFormat="" DataType="dtFloat" DimensionType="cdtCols" OrderNumber="0">
+									<Filter Usable="true"/>
+								</Item>
+								<Item Name="ID_SHOPNAME_STORE" DisplayName="Название магазина" DataType="dtString" DimensionType="cdtFree" OrderNumber="0">
+									<Filter Usable="true"/>
+								</Item>
+								<Item Name="DATE_DAY" DisplayName="Дата (день)" DataType="dtDateTime" DimensionType="cdtRows" OrderNumber="0">
+									<Filter Usable="true"/>
+								</Item>
+							</Dimensions>
+						</Dimensions>
+						<Summaries>
+							<Cases>
+								<Item Name="CountCase" DisplayName="Количество" CountCase="true">
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+									<Functions/>
+								</Item>
+							</Cases>
+						</Summaries>
+						<Charts/>
+					</Engine>
+				</Component>
+			</Item>
+			<Item Guid="0cbca9ef-6a48-416a-903b-4e2ec2a7d5bc" DisplayName="Статистика" VendorGuid="121165f9-07d1-4507-9ff4-d64f6333b4ca">
+				<InputPorts>
+					<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных"/>
+				</InputPorts>
+				<OutputPorts/>
+				<ServiceInputPorts>
+					<Item Guid="00bd0b43-e4b5-3ac1-b95a-ac1bee14f858" Name="SynchronizationInputPort" DisplayName="Порядок выполнения"/>
+				</ServiceInputPorts>
+				<ServiceOutputPorts>
+					<Item Guid="ca080ff0-2342-32b0-b480-586f9747bace" Name="SynchronizationOutputPort" DisplayName="Порядок выполнения"/>
+					<Item Guid="e98be5ba-c627-3a55-af82-a399dd13c73b" Name="ComponentOutputPort" DisplayName="Компонент"/>
+					<Item Guid="58922a98-d1ea-36de-9099-3ce26fe160e2" Name="DependentNodeOutputPort" DisplayName="Зависимые узлы"/>
+				</ServiceOutputPorts>
+				<Component>
+					<InputSockets>
+						<Item Guid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b" Name="DataSource" DisplayName="Набор данных">
+							<Socket xsi:type="TBGTuneDataSourceSocket">
+								<Constraints/>
+								<DataSource SyncThroughColumns="true">
+									<ColumnDefs/>
+								</DataSource>
+							</Socket>
+						</Item>
+					</InputSockets>
+					<Engine xsi:type="TBGStatView">
+						<StatViewColumns>
+							<Item Name="ID_SHOP" DisplayName="Код магазина" DataType="dtString">
+								<ColumnConfig/>
+							</Item>
+							<Item Name="DATE_MONTH" DisplayName="Дата (месяц)" DataType="dtDateTime">
+								<ColumnConfig/>
+							</Item>
+							<Item Name="ID_SUBGROUP" DisplayName="Код подгруппы" DataType="dtString">
+								<ColumnConfig/>
+							</Item>
+							<Item Name="SUM_REVENUE" DisplayName="Выручка" DataType="dtFloat" RoundMode="rmoNearestMath" NumberOfDecimals="3">
+								<ColumnConfig/>
+							</Item>
+							<Item Name="SUM_FREQUENCY" DisplayName="Частота попадания в чек" DataType="dtFloat" RoundMode="rmoNearestMath" NumberOfDecimals="3">
+								<ColumnConfig/>
+							</Item>
+							<Item Name="SUM_NUM_CHECK" DisplayName="Количество продаж" DataType="dtFloat" RoundMode="rmoNearestMath" NumberOfDecimals="3">
+								<ColumnConfig/>
+							</Item>
+						</StatViewColumns>
+						<StatIndicatorColumnConfig/>
+						<ColumnInfosConfig>
+							<Item ID="7">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="1">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="3">
+								<ColumnConfig/>
+							</Item>
+						</ColumnInfosConfig>
+						<StatIndicatorsConfig>
+							<Item ID="0">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="1">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="2">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="3">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="4">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="5">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="6">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="7">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="8">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="9">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="10">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="11">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="12">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="13">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="14">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="15">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="16">
+								<ColumnConfig/>
+							</Item>
+						</StatIndicatorsConfig>
+						<HistogramColumnsConfig>
+							<Item ID="0">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="1">
+								<ColumnConfig Visible="false"/>
+							</Item>
+							<Item ID="2">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="3">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="4">
+								<ColumnConfig/>
+							</Item>
+							<Item ID="5">
+								<ColumnConfig/>
+							</Item>
+						</HistogramColumnsConfig>
+					</Engine>
+				</Component>
+			</Item>
+		</Nodes>
+		<Links>
+			<Item Guid="28fdb384-bf51-4fe8-aeac-882aed28bb02">
+				<SourcePort NodeGuid="2a7a5ee1-33cb-4d28-86c3-c2898ca916ac" PortGuid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"/>
+				<TargetPort NodeGuid="cf4dd927-3c13-499d-872f-6f2ab56ee0cb" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="496fba09-5c45-49e5-aee6-a1b56047288c">
+				<SourcePort NodeGuid="2a512f3a-7388-42b0-a8a1-64e47dfbc578" PortGuid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"/>
+				<TargetPort NodeGuid="bf086926-33cd-494b-a250-fd3b6f44bc2a" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+			<Item Guid="a2caf7de-153e-4875-8a9e-b7a65e4056bf">
+				<SourcePort NodeGuid="23b3798f-db1e-4343-805f-ce949ac30ba2" PortGuid="4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"/>
+				<TargetPort NodeGuid="0cbca9ef-6a48-416a-903b-4e2ec2a7d5bc" PortGuid="9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"/>
+			</Item>
+		</Links>
+	</ModelViews>
+</Unit>

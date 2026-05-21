@@ -1,0 +1,2019 @@
+{
+  "etl": {
+    "path": "packages/etl/packet1.lgp",
+    "units": [
+      {
+        "unit": "Unit_0/Unit.xml",
+        "nodes": [
+          {
+            "display": "Потребление электрической энергии.txt",
+            "engine": "TBGImportTextFile"
+          },
+          {
+            "display": "Фильтр",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Сортировка",
+            "engine": "TBGSortingEngine"
+          },
+          {
+            "display": "Экспорт в файл Loginom",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Группировка",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Свертка столбцов",
+            "engine": "TBGColumnFlippingEngine"
+          },
+          {
+            "display": "Продажи по чекам.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "Калькулятор",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Вывод",
+            "engine": "TBGExportNative"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_1/Unit.xml",
+        "nodes": [
+          {
+            "display": "Товары.txt",
+            "engine": "TBGImportTextFile"
+          },
+          {
+            "display": "Артикул",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Продажи по чекам.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "Начало с даты",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Калькулятор",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Начало с даты DESC",
+            "engine": "TBGSortingEngine"
+          },
+          {
+            "display": "Минимально месяцев",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "output2.lgd",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Артикул",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "output2.1.lgd",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Артикул",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Выражение1",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "2.2",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Выражение1",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Выражение1 DESC",
+            "engine": "TBGSortingEngine"
+          },
+          {
+            "display": "2.3",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Количество на списание",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "output2.4.lgd",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Номер строки",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Дата продажи DESC",
+            "engine": "TBGSortingEngine"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_2/Unit.xml",
+        "nodes": [
+          {
+            "display": "farma_sales.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "Группа.Наименование, Отдел.Наименование",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Количество, Сумма по Дата",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Сумма по Отдел.Наименование",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Дата (Год + Месяц)",
+            "engine": "TBGDateReformEngine"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_3/Unit.xml",
+        "nodes": [
+          {
+            "display": "dynamic.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "visits.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "product_portfolio.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "Калькулятор",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Накопительный Итог",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Дата (месяц)",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Выручка в тыс., Средний чек в тыс.",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          },
+          {
+            "display": "Статистика",
+            "engine": "TBGStatView"
+          }
+        ]
+      }
+    ],
+    "version": "7.3.1",
+    "name": "packet1"
+  },
+  "association": {
+    "path": "packages/association/packet2.lgp",
+    "units": [
+      {
+        "unit": "Unit_0/Unit.xml",
+        "nodes": [
+          {
+            "display": "Чеки",
+            "engine": "TBGImportTextFile"
+          },
+          {
+            "display": "Ассоциативные правила",
+            "engine": "TBGAssnRulesEngine"
+          },
+          {
+            "display": "Тривиальные правила",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Полезные правила",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Непонятное правило",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Объединение",
+            "engine": "TBGUnionDataEngine"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          }
+        ]
+      }
+    ],
+    "version": "6.5.0",
+    "name": "lof"
+  },
+  "features": {
+    "path": "packages/features/features_reference.lgp",
+    "units": [
+      {
+        "unit": "Unit_0/Unit.xml",
+        "nodes": [
+          {
+            "display": "GoldUSD.csv",
+            "engine": "TBGImportTextFile"
+          },
+          {
+            "display": "Python",
+            "engine": "TBGPythonEngine"
+          },
+          {
+            "display": "Корр. анализ: 5 x Close",
+            "engine": "TBGCorrAnalysisEngine"
+          },
+          {
+            "display": "OHLC_Range, Price_Change, Log_Volume",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Пирсона DESC",
+            "engine": "TBGSortingEngine"
+          },
+          {
+            "display": "Коэффициент_корреляции ASC, Признак DESC",
+            "engine": "TBGSortingEngine"
+          },
+          {
+            "display": "Пропуски: Open, High, Low, Close, Volume",
+            "engine": "TBGDataRecoveryEngine"
+          },
+          {
+            "display": "Выбросы: Open, High, Low, Close, Volume",
+            "engine": "TBGElimOutlierEngine"
+          },
+          {
+            "display": "выход.txt",
+            "engine": "TBGExportTextFile"
+          },
+          {
+            "display": "ohlc.txt",
+            "engine": "TBGExportTextFile"
+          },
+          {
+            "display": "pyrson.txt",
+            "engine": "TBGExportTextFile"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          }
+        ]
+      }
+    ],
+    "version": "7.3.1",
+    "name": "features_reference"
+  },
+  "clustering": {
+    "path": "packages/clustering/clustering_reference.lgp",
+    "units": [
+      {
+        "unit": "Unit_0/Unit.xml",
+        "nodes": [
+          {
+            "display": "Excel файл",
+            "engine": "TBGImportExcelFileEngine"
+          },
+          {
+            "display": "EM Кластеризация-1",
+            "engine": "TBGEMEngine"
+          },
+          {
+            "display": "Параметры полей-1",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "EM Кластеризация",
+            "engine": "TBGEMEngine"
+          },
+          {
+            "display": "Параметры полей-2",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Фильтр строк",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "meta-silhouettes",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "meta-silhouettes-1",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "Кластеризация k-means-1",
+            "engine": "TBGClusterizationEngine"
+          },
+          {
+            "display": "Параметры полей",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Параметры полей-3",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Фильтр строк-1",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Сортировка",
+            "engine": "TBGSortingEngine"
+          },
+          {
+            "display": "Кластеризация k-means",
+            "engine": "TBGClusterizationEngine"
+          },
+          {
+            "display": "meta-silhouettes-2",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "meta-silhouettes-3",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "Выделение полей",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Кластеризация",
+            "engine": "TBGClusterizationEngine"
+          },
+          {
+            "display": "WSCC",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Квадрат расстояний",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "Параметры качества до исключения",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "Параметры качества после исключения",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "Параметры качества до исключения",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "",
+            "engine": "TBGChartView.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "Параметры качества после исключения",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "Статистика",
+            "engine": "TBGStatView"
+          },
+          {
+            "display": "Профили кластеров EM",
+            "engine": "TBGClusterProfilesView"
+          },
+          {
+            "display": "Профили кластеров EM после исключения",
+            "engine": "TBGClusterProfilesView"
+          },
+          {
+            "display": "Качество кластеризации до исключения",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Качество кластеризации после исключения",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Профили кластеров k-means до исключения",
+            "engine": "TBGClusterProfilesView"
+          },
+          {
+            "display": "Профили кластеров k-means после исключения",
+            "engine": "TBGClusterProfilesView"
+          },
+          {
+            "display": "Качество кластеризации (до исключения)",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Качество кластеризации (после исключения)",
+            "engine": "TBGBrowseView"
+          }
+        ]
+      }
+    ],
+    "version": "7.3.1",
+    "name": "abc"
+  },
+  "abc": {
+    "path": "packages/abc/ABC_template.lgp",
+    "units": [
+      {
+        "unit": "Unit_0/Unit.xml",
+        "nodes": [
+          {
+            "display": "IowaLiquorSales.csv",
+            "engine": "TBGImportTextFile"
+          },
+          {
+            "display": "IowaLiquorSales.lgd",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Калькулятор",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Замена",
+            "engine": "TBGCustomModelComponentEngine"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_1/Unit.xml",
+        "nodes": [
+          {
+            "display": "IowaLiquorSales.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "Фильтр строк",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Объект по Группа",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "↶ABC-анализ (метод касательных) (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Внутреннее",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Объект по Группа",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_2/Unit.xml",
+        "nodes": [
+          {
+            "display": "Калькулятор",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "ABC-анализ (Маржа)",
+            "engine": null
+          },
+          {
+            "display": "ABC-анализ (Литраж)",
+            "engine": null
+          },
+          {
+            "display": "Слияние",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Транзакции за 2017 год",
+            "engine": "TBGReferenceNodeComponentEngine"
+          },
+          {
+            "display": "Маржа",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Полное, Объект",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Итоговая группа",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Итоговая группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Объект по Итоговая группа",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Категория",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Полное, Объект",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Итоговая группа",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Итоговая группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Внутреннее, Объект",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Итоговая группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Объект",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_3/Unit.xml",
+        "nodes": [
+          {
+            "display": "ABC-анализ",
+            "engine": null
+          },
+          {
+            "display": "Транзакции",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "IowaLiquorSales.lgd",
+            "engine": "TBGReferenceNodeComponentEngine"
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Год",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Месяц",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Квартал",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "↶ABC-анализ (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Объект по Группа",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Левое, Объект",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Объект по Группа, Группа",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Статистика",
+            "engine": "TBGStatView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_4/Unit.xml",
+        "nodes": [
+          {
+            "display": "ABC-анализ",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "Цикл",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "↶IowaLiquorSales.lgd",
+            "engine": "TBGReferenceNodeComponentEngine"
+          },
+          {
+            "display": "Период",
+            "engine": "TBGDateReformEngine"
+          },
+          {
+            "display": "ABC по годам",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "Поставщик",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Поставщик по Группа",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "ABC по месяцам",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "Период-1",
+            "engine": "TBGDateReformEngine"
+          },
+          {
+            "display": "Дата (Год + Месяц, Первый день), Группа",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Внутреннее, Поставщик",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Поставщики без покупок на дату",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "Группа",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "↶Анализ (группа)",
+            "engine": null
+          },
+          {
+            "display": "Анализ",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "Анализ собсна",
+            "engine": null
+          },
+          {
+            "display": "Сумма продажи ($) по Поставщик",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Обрезать до мин. набора, повторять набор данных",
+            "engine": "TBGColUnionDataEngine"
+          },
+          {
+            "display": "Удаление, Изменение",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          },
+          {
+            "display": "↶Анализ (группа)",
+            "engine": null
+          },
+          {
+            "display": "Анализ",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "Анализ собсна",
+            "engine": null
+          },
+          {
+            "display": "Сумма продажи ($) по Поставщик",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Обрезать до мин. набора, повторять набор данных",
+            "engine": "TBGColUnionDataEngine"
+          },
+          {
+            "display": "Удаление, Изменение",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Куб",
+            "engine": "TBGCubeView"
+          },
+          {
+            "display": "Разность, Поставщик",
+            "engine": "TBGJoinDataEngine"
+          },
+          {
+            "display": "Сумма продажи ($) по Поставщик (+1)",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Дата (Год + Месяц, Первый день)",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Поставщик",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          }
+        ]
+      }
+    ],
+    "version": "7.3.1",
+    "name": "ABC_template"
+  },
+  "regression": {
+    "path": "packages/regression/regression_reference.lgp",
+    "units": [
+      {
+        "unit": "Unit_0/Unit.xml",
+        "nodes": [
+          {
+            "display": "all_v2.csv",
+            "engine": "TBGImportTextFile"
+          },
+          {
+            "display": "Параметры полей",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Замена",
+            "engine": "TBGCustomModelComponentEngine"
+          },
+          {
+            "display": "+Объект (object_id)",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "russia_real_estate_kaggle",
+            "engine": "TBGExportNative"
+          },
+          {
+            "display": "Параметры полей",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_1/Unit.xml",
+        "nodes": [
+          {
+            "display": "Все данные",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "DataPrep",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "Разбиение 80/20",
+            "engine": "TBGPartitionEngine"
+          },
+          {
+            "display": "Только СПб и область",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Корреляционная матрица",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "Число комнат",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Новые признаки",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Фильтр объектов",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Давность объявления",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Максимальная дата",
+            "engine": "TBGGroupDataEngine"
+          },
+          {
+            "display": "Таблица в переменные",
+            "engine": "TBGCustomModelComponentEngine"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Корреляционный анализ",
+            "engine": "TBGCorrAnalysisEngine"
+          },
+          {
+            "display": "Фильтр по порогу",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Корреляционная матрица",
+            "engine": "TBGCubeView"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_2/Unit.xml",
+        "nodes": [
+          {
+            "display": "__диаграмма",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Датасет 80/20",
+            "engine": "TBGReferenceNodeComponentEngine"
+          },
+          {
+            "display": "Линрегрессия: Цена, руб., Давность объявления (+13)",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "↶Диаграмма рассеяния",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "↶regression metrics (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Линрегрессия: Цена, руб., Давность объявления (+13)",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "↶regression metrics (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_3/Unit.xml",
+        "nodes": [
+          {
+            "display": "Датасет 80/20",
+            "engine": "TBGReferenceNodeComponentEngine"
+          },
+          {
+            "display": "↶model.fitter (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "↶Binary Encoder (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Python",
+            "engine": "TBGPythonEngine"
+          },
+          {
+            "display": "↶Диаграмма рассеяния",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "↶model.fitter (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "↶Диаграмма рассеяния",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "кастомный энкодер",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "↶regression metrics (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Тестовое множество",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "IsTestSet",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Python",
+            "engine": "TBGPythonEngine"
+          },
+          {
+            "display": "IsTestSet",
+            "engine": "TBGFilterDataEngine"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_4/Unit.xml",
+        "nodes": [
+          {
+            "display": "Датасет 80/20",
+            "engine": "TBGReferenceNodeComponentEngine"
+          },
+          {
+            "display": "↶model.fitter (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "↶Ordinal Encoder (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Python",
+            "engine": "TBGPythonEngine"
+          },
+          {
+            "display": "↶Диаграмма рассеяния",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "кастомный энкодер",
+            "engine": "TBGModelGenericComponentEngine"
+          },
+          {
+            "display": "↶model.fitter (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "↶Диаграмма рассеяния",
+            "engine": "TBGModelGenericComponentEngine.DerivedSchemeType"
+          },
+          {
+            "display": "↶regression metrics (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Тестовое множество",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "IsTestSet",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Python",
+            "engine": "TBGPythonEngine"
+          },
+          {
+            "display": "IsTestSet",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "",
+            "engine": null
+          },
+          {
+            "display": "",
+            "engine": null
+          }
+        ]
+      },
+      {
+        "unit": "Unit_5/Unit.xml",
+        "nodes": [
+          {
+            "display": "Число амбулаторно-поликлинических организаций.xlsx",
+            "engine": "TBGImportExcelFileEngine"
+          },
+          {
+            "display": "period^2",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Линейная",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "Параболическая",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "period^3",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Гиперболическая",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "period^4",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Степенная\n4 степень",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "period^5",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Степенная\n5 степень",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "period^6",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "\nСтепенная\n6 степень",
+            "engine": "TBGLinRegressionEngine"
+          },
+          {
+            "display": "В строки: Всего примеров (+15)",
+            "engine": "TBGVariablesToDataEngine"
+          },
+          {
+            "display": "Метрика",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Метрика",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "В строки: Всего примеров (+15)",
+            "engine": "TBGVariablesToDataEngine"
+          },
+          {
+            "display": "В строки: Всего примеров (+15)",
+            "engine": "TBGVariablesToDataEngine"
+          },
+          {
+            "display": "В строки: Всего примеров (+15)",
+            "engine": "TBGVariablesToDataEngine"
+          },
+          {
+            "display": "В строки: Всего примеров (+15)",
+            "engine": "TBGVariablesToDataEngine"
+          },
+          {
+            "display": "В строки: Всего примеров (+15)",
+            "engine": "TBGVariablesToDataEngine"
+          },
+          {
+            "display": "Метрика",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Метрика",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Метрика",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Метрика",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Объединение",
+            "engine": "TBGUnionDataEngine"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          },
+          {
+            "display": "Диаграмма",
+            "engine": "TBGChartView"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLinRegressReport"
+          }
+        ]
+      },
+      {
+        "unit": "Unit_6/Unit.xml",
+        "nodes": [
+          {
+            "display": "Клиенты торговой сети.xlsx",
+            "engine": "TBGImportExcelFileEngine"
+          },
+          {
+            "display": "Пропуски: Дата актуальности, Пол (1 - жен., 2 - муж.) (+6)",
+            "engine": "TBGDataRecoveryEngine"
+          },
+          {
+            "display": "dummy для \"категорий\"",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Купит ли",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Удаление",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Логрегрессия: Купит ли, Мужчина, Женщина (+15)",
+            "engine": "TBGLogRegressionEngine"
+          },
+          {
+            "display": "Счет2, Длительность регистрации2",
+            "engine": "TBGCalcData"
+          },
+          {
+            "display": "Логрегрессия: Купит ли, Мужчина, Женщина (+17)",
+            "engine": "TBGLogRegressionEngine"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Качество бинарной классификации",
+            "engine": "TBGROCView"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLogRegressReport"
+          },
+          {
+            "display": "Качество бинарной классификации",
+            "engine": "TBGROCView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          }
+        ]
+      }
+    ],
+    "version": "7.3.1",
+    "name": "LinearReg_template"
+  },
+  "scoring": {
+    "path": "packages/scoring/scoring_reference.lgp",
+    "units": [
+      {
+        "unit": "Unit_0/Unit.xml",
+        "nodes": [
+          {
+            "display": "otp_test.lgd",
+            "engine": "TBGImportNative"
+          },
+          {
+            "display": "WOE_ENCODER-1",
+            "engine": "TBGPythonEngine"
+          },
+          {
+            "display": "↶IV-отбор (выполнение)",
+            "engine": null
+          },
+          {
+            "display": "Пропуски: Идентификатор клиента, Отклик, Возраст (+49)",
+            "engine": "TBGDataRecoveryEngine"
+          },
+          {
+            "display": "Кон. классы: Отклик, Возраст ",
+            "engine": "TBGCoarseClassesEngine"
+          },
+          {
+            "display": "TARGET, TARGET|Прогноз",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "TARGET, Отлик|Прогноз",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Логрегрессия: TARGET ",
+            "engine": "TBGLogRegressionEngine"
+          },
+          {
+            "display": "Отлик",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "TARGET, Отлик|Прогноз",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Отлик",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "TARGET, Отлик|Прогноз",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "TARGET, Отлик|Прогноз",
+            "engine": "TBGFilterDataEngine"
+          },
+          {
+            "display": "Изменение",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Удаление, Изменение",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Логрегрессия: TARGET, AGE_ClassMark",
+            "engine": "TBGLogRegressionEngine"
+          },
+          {
+            "display": "Удаление, Изменение",
+            "engine": "TBGReformColumnsEngine"
+          },
+          {
+            "display": "Логрегрессия: TARGET, Возраст, Пол, Кол-во детей ",
+            "engine": "TBGLogRegressionEngine"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Статистика",
+            "engine": "TBGStatView"
+          },
+          {
+            "display": "Качество данных",
+            "engine": "TBGQualityView"
+          },
+          {
+            "display": "Статистика",
+            "engine": "TBGStatView"
+          },
+          {
+            "display": "Таблица",
+            "engine": "TBGBrowseView"
+          },
+          {
+            "display": "Качество бинарной классификации",
+            "engine": "TBGROCView"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLogRegressReport"
+          },
+          {
+            "display": "Качество бинарной классификации",
+            "engine": "TBGROCView"
+          },
+          {
+            "display": "Отчет по регрессии",
+            "engine": "TBGLogRegressReport"
+          }
+        ]
+      }
+    ],
+    "version": "7.3.1",
+    "name": "_7_f"
+  }
+}
